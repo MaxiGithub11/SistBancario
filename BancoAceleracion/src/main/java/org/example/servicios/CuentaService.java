@@ -1,12 +1,14 @@
 package org.example.servicios;
 
 import org.example.entidades.Cuenta;
+import org.example.entidades.Sucursal;
+import org.example.entidades.Usuario;
 
 public class CuentaService {
 
-    public Cuenta crearCuenta(){
+    public Cuenta crearCuenta(String CBU, Sucursal sucursal, Usuario usuario, double saldo){
 
-        return new Cuenta();
+        return new Cuenta(CBU, sucursal, usuario, saldo);
     }
 
     public void depositar(Cuenta cuenta, double monto){
@@ -24,7 +26,7 @@ public class CuentaService {
             cuenta.setSaldo(cuenta.getSaldo() - monto);
             System.out.println("Se extrajo correctamente $" + monto);
         } else {
-            System.out.println("Saldo insuficiente para realizar la operacion");
+            System.out.println("Quiso retirar $" + monto + " Y el saldo es insuficiente para realizar la operacion");
         }
         mostrarSaldo(cuenta);
     }
@@ -40,7 +42,7 @@ public class CuentaService {
             cuentaDestino.setSaldo(cuentaDestino.getSaldo() + monto); // agregarSaldo()
             System.out.println("Se transfirio correctamente $" + monto);
         } else {
-            System.out.println("Saldo insuficiente para realizar la operacion");
+            System.out.println("Se quiso transferir $" + monto + " y el saldo es insuficiente para realizar la operacion");
         }
 
         System.out.println("--Cuenta Origen--");
