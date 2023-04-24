@@ -6,9 +6,9 @@ import org.example.entidades.Usuario;
 
 public class CuentaService {
 
-    public Cuenta crearCuenta(String CBU, Sucursal sucursal, Usuario usuario, double saldo){
+    public Cuenta crearCuenta(String CBU, Sucursal sucursal, Usuario usuario, double saldo, String tipoCuenta){
 
-        return new Cuenta(CBU, sucursal, usuario, saldo);
+        return new Cuenta(CBU, sucursal, usuario, saldo, tipoCuenta);
     }
 
     public void depositar(Cuenta cuenta, double monto){

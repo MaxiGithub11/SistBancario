@@ -27,11 +27,11 @@ public class Main {
         Usuario usuario2 = usuarioService.crearUsuario("fede", "21754323");
 
         // Creacion de cuentas
-        Cuenta cuenta1 = cuentaService.crearCuenta("81023981", sucursal1, usuario1, 0);
-        Cuenta cuenta2 = cuentaService.crearCuenta("23423423", sucursal2, usuario1, 0);
+        Cuenta cuenta1 = cuentaService.crearCuenta("81023981", sucursal1, usuario1, 0, "Cuenta Ahorro");
+        Cuenta cuenta2 = cuentaService.crearCuenta("23423423", sucursal2, usuario1, 0, "Cuenta Corriente");
 
-        Cuenta cuenta3 = cuentaService.crearCuenta("23455123", sucursal1, usuario2, 0);
-        Cuenta cuenta4 = cuentaService.crearCuenta("56756434", sucursal2, usuario2, 0);
+        Cuenta cuenta3 = cuentaService.crearCuenta("23455123", sucursal1, usuario2, 0, "Cuenta Corriente");
+        Cuenta cuenta4 = cuentaService.crearCuenta("56756434", sucursal2, usuario2, 0, "Cuenta Ahorro");
 
         // Carga de cuentas a las listas "cuentas1" y "cuentas2"
 

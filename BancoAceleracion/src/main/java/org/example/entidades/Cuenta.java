@@ -14,5 +14,6 @@ public class Cuenta {
     private Sucursal sucursal;
     private Usuario usuario;
     private double saldo;
+    private String tipoCuenta;
 
 }
