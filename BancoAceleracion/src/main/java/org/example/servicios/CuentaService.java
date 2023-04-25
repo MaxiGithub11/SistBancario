@@ -3,10 +3,11 @@ package org.example.servicios;
 import org.example.entidades.Cuenta;
 import org.example.entidades.Sucursal;
 import org.example.entidades.Usuario;
+import org.example.enums.TipoCuenta;
 
 public class CuentaService {
 
-    public Cuenta crearCuenta(String CBU, Sucursal sucursal, Usuario usuario, double saldo, String tipoCuenta){
+    public Cuenta crearCuenta(String CBU, Sucursal sucursal, Usuario usuario, double saldo, TipoCuenta tipoCuenta){
 
         return new Cuenta(CBU, sucursal, usuario, saldo, tipoCuenta);
     }

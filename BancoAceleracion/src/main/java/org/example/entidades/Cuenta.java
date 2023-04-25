@@ -1,6 +1,7 @@
 package org.example.entidades;
 
 import lombok.*;
+import org.example.enums.TipoCuenta;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,6 +15,6 @@ public class Cuenta {
     private Sucursal sucursal;
     private Usuario usuario;
     private double saldo;
-    private String tipoCuenta;
+    private TipoCuenta tipoCuenta;
 
 }
