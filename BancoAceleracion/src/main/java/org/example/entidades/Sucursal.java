@@ -6,7 +6,6 @@ import lombok.*;
 @AllArgsConstructor
 @Getter
 @Setter
-@ToString
 
 public class Sucursal {
 
@@ -15,5 +14,13 @@ public class Sucursal {
     private String ciudad;
     private String direccion;
 
-
+    @Override
+    public String toString() {
+        return "Sucursal{" +
+                "pais='" + pais + '\'' +
+                ", provincia='" + provincia + '\'' +
+                ", ciudad='" + ciudad + '\'' +
+                ", direccion='" + direccion + '\'' +
+                '}';
+    }
 }

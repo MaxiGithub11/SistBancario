@@ -8,7 +8,6 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 @Setter
-@ToString
 
 public class Usuario {
 
@@ -16,4 +15,12 @@ public class Usuario {
     private String nombre;
     private String dni;
 
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "cuentas=" + cuentas +
+                ", nombre='" + nombre + '\'' +
+                ", dni='" + dni + '\'' +
+                '}';
+    }
 }

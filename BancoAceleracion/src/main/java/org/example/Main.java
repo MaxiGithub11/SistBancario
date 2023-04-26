@@ -19,20 +19,21 @@ public class Main {
         CuentaService cuentaService = new CuentaService();
         SucursalService sucursalService = new SucursalService();
 
+
         // Creacion de sucursales
         Sucursal sucursal1 = sucursalService.crearSucursal("Argentina", "Buenos Aires", "Palermo", "San Martin 123");
         Sucursal sucursal2 = sucursalService.crearSucursal("Argentina", "Cordoba", "Villa Maria", "Obispo Trejo 321");
 
         // Creacion de usuarios
-        Usuario usuario1 = usuarioService.crearUsuario("pepe", "34789123");
-        Usuario usuario2 = usuarioService.crearUsuario("fede", "21754323");
+        Usuario usuario1 = usuarioService.crearUsuario("pepe", "123");
+        Usuario usuario2 = usuarioService.crearUsuario("fede", "321");
 
         // Creacion de cuentas
-        Cuenta cuenta1 = cuentaService.crearCuenta("81023981", sucursal1, usuario1, 0, TipoCuenta.CUENTA_AHORRO);
-        Cuenta cuenta2 = cuentaService.crearCuenta("23423423", sucursal2, usuario1, 0, TipoCuenta.CUENTA_CORRIENTE);
+        Cuenta cuenta1 = cuentaService.crearCuenta("81023981", sucursal1, usuario1, 500, TipoCuenta.CUENTA_AHORRO);
+        Cuenta cuenta2 = cuentaService.crearCuenta("23423423", sucursal2, usuario1, 500, TipoCuenta.CUENTA_CORRIENTE);
 
-        Cuenta cuenta3 = cuentaService.crearCuenta("23455123", sucursal1, usuario2, 0, TipoCuenta.CUENTA_CORRIENTE);
-        Cuenta cuenta4 = cuentaService.crearCuenta("56756434", sucursal2, usuario2, 0, TipoCuenta.CUENTA_AHORRO);
+        Cuenta cuenta3 = cuentaService.crearCuenta("23455123", sucursal1, usuario2, 500, TipoCuenta.CUENTA_CORRIENTE);
+        Cuenta cuenta4 = cuentaService.crearCuenta("56756434", sucursal2, usuario2, 500, TipoCuenta.CUENTA_AHORRO);
 
         // Carga de cuentas a las listas "cuentas1" y "cuentas2"
 
@@ -49,7 +50,7 @@ public class Main {
         usuario1.setCuentas(cuentas1);
         usuario2.setCuentas(cuentas2);
 
-        // Realizar transacciones
+        /*// Realizar transacciones
 
         // Deposito
         System.out.println("---depositos---");
@@ -69,7 +70,11 @@ public class Main {
         System.out.println("---transferencias---");
         cuentaService.transferir(usuario1.getCuentas().get(0), usuario2.getCuentas().get(0), 200);
         System.out.println();
-        cuentaService.transferir(usuario1.getCuentas().get(0), usuario2.getCuentas().get(0), 50);
+        cuentaService.transferir(usuario1.getCuentas().get(0), usuario2.getCuentas().get(0), 50); */
+
+        //System.out.println(usuarioService.returnUsuarios());
+
+        cuentaService.menu(usuarioService.returnUsuarios());
 
     }
 }

@@ -7,7 +7,6 @@ import org.example.enums.TipoCuenta;
 @AllArgsConstructor
 @Getter
 @Setter
-@ToString
 
 public class Cuenta {
 
@@ -17,4 +16,13 @@ public class Cuenta {
     private double saldo;
     private TipoCuenta tipoCuenta;
 
+    @Override
+    public String toString() {
+        return "Cuenta{" +
+                "CBU='" + CBU + '\'' +
+                ", sucursal=" + sucursal +
+                ", saldo=" + saldo +
+                ", tipoCuenta=" + tipoCuenta +
+                '}';
+    }
 }
