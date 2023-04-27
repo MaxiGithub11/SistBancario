@@ -20,7 +20,6 @@ public class Cuenta {
     public String toString() {
         return "Cuenta{" +
                 "CBU='" + CBU + '\'' +
-                ", sucursal=" + sucursal +
                 ", saldo=" + saldo +
                 ", tipoCuenta=" + tipoCuenta +
                 '}';
